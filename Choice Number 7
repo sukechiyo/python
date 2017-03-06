@@ -1,0 +1,19 @@
+# coding: utf-8
+
+# This program is just a simple joke.
+# 
+
+import random
+
+num = 0
+number7 = []
+
+# Simple random number emission
+for i in range(7):
+    num = random.randrange(1,37)
+    number7.append(num)
+    
+print(number7)
+
+# This is just a number with bias.
+# So, for actual use, it is necessary to calculate bias.
