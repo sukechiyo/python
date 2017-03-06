@@ -1,0 +1,35 @@
+# coding: utf-8
+
+import random
+
+# Card definition
+number = random.randrange(1,13)
+
+if number == 13:
+    print("Your card is K")
+elif number == 12:
+    print("Your card is Q")
+elif number == 11:
+    print("Your card is J")
+else:
+    print("Your card is "+str(number))
+
+# Card definition(Computer)
+computer_hand = random.randrange(1,13)
+
+if computer_hand == 13:
+    print("Computer's card is K")
+elif computer_hand == 12:
+    print("Computer's is Q")
+elif computer_hand == 11:
+    print("Computer's is J")
+else:
+    print("Computer's is "+str(computer_hand))
+
+# High and Row
+if number > computer_hand:
+    print("You win")
+elif number == computer_hand:
+    print("Draw")
+else:
+    print("You lose")
