@@ -1,0 +1,42 @@
+#Data Array
+text = ["A","B","C","D","E","F","G","H","I","J"]
+
+#Number of times to extract
+a = 2
+b = 2
+c = 6
+
+#operation for a
+i = 0
+while i < a:
+    if i == a - 1:
+        print(text[i])
+    else:
+        print(text[i],end="")
+
+    i += 1
+    
+del text[0:a]
+
+#operation for b
+t = 0
+while t  < b:
+    if t == b - 1:
+        print(text[t])
+    else:
+        print(text[t],end="")
+    
+    t += 1
+
+del text[0:b]
+
+#operation for c
+j = 0
+while j < c:
+    if j == c - 1:
+        print(text[j])
+    else:
+        print(text[j],end="")
+    
+    j += 1
+    
