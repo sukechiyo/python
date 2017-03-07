@@ -1,0 +1,9 @@
+#Wrong
+nekoneko = [[]]*10 #actually the same sequence
+nekoneko[1].append("neko")
+print(nekoneko)
+
+#True
+neko = [[] for i in range(10)] #Simple empty array
+neko[1].append("neko")
+print(neko)
