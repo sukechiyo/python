@@ -2,7 +2,7 @@
 word = input()
 
 #Japari dictionary
-j_dictionary = {"すご":"すっごーい!","すごい":"すごーい!","たのしい":"たーのしー!","フレンズ":"フレンズだね"}
+j_dictionary = {"すご":"すっごーい!","すごい":"すごーい!","たのしい":"たーのしー!","知ってた?":"知ってたー?","おいしい":"おいしー!","うめー":"うめーにゃ！","えらい":"えらーい!"}
 
 #Japari Translation
 if word in j_dictionary:
