@@ -1,0 +1,9 @@
+#please input
+word = input()
+
+#Japari dictionary
+j_dictionary = {"すご":"すごーい!!","すごい":"すごーい!!","たのしい":"たのしー!!"}
+
+#Japari Translation
+if word in j_dictionary:
+    print(j_dictionary[word])
