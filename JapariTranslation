@@ -1,9 +1,9 @@
-#please input
+#普通の言葉でインプット
 word = input()
 
-#Japari dictionary(Increase phrases appropriately)
+#ジャパリ語辞典(ボキャ貧なので、増やしてください)
 j_dictionary = {"すご":"すっごーい!","すごい":"すごーい!","たのしい":"たーのしー!","知ってた?":"知ってたー?","おいしい":"おいしー!","えらい":"えらーい!"}
 
-#Japari Translation
+#ジャパリ語変換
 if word in j_dictionary:
     print(j_dictionary[word])
