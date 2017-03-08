@@ -1,5 +1,5 @@
 # Python3
-This repository is a test for learning Python.<br>
-I'm a coader, but I don't know about Python well.<br>
-So, now I tring many coading for learning Python.<br>
-<b>"YOROSHIKU-ONEGAISIMASU"</b>
+このリポジトリは、フロントエンド・エンジニアもどきの私が、Pythonを勉強するために作成したリポジトリになります。
+そのため、Issueなどには若干勉強が不足している点があるかもしれませんので、もし「ここ違うよ～」など気がついた点がありましたら、教えていただけるとありがたいです。
+また、めっさシンプルなプログラムをちょこちょこ作っていく予定です。
+よろしくお願いいたします。
