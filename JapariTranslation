@@ -1,8 +1,8 @@
 #please input
 word = input()
 
-#Japari dictionary
-j_dictionary = {"すご":"すっごーい!","すごい":"すごーい!","たのしい":"たーのしー!","知ってた?":"知ってたー?","おいしい":"おいしー!","うめー":"うめーにゃ！","えらい":"えらーい!"}
+#Japari dictionary(Increase phrases appropriately)
+j_dictionary = {"すご":"すっごーい!","すごい":"すごーい!","たのしい":"たーのしー!","知ってた?":"知ってたー?","おいしい":"おいしー!","えらい":"えらーい!"}
 
 #Japari Translation
 if word in j_dictionary:
