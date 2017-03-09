@@ -1,0 +1,42 @@
+#chair
+n = input()
+n_array = n.split(" ")
+
+chair = int(n_array[0])
+group = int(n_array[1])
+array = []
+for i in range(chair):
+    array.append(i + 1)
+
+count = len(array)
+
+#Customer
+for i in range(group):
+    c = input()
+    c_array = c.split(" ")
+
+    member = int(c_array[0])
+    pos = int(c_array[1])
+
+    f = 0
+    take = []
+    for i in range(member):
+        
+        pos2 = pos + i
+        if pos2 > chair:
+            r = pos2 - chair
+        else:
+            r = pos2
+        take.append(r)
+        
+
+    if all( x in array for x in take ) == True:
+        z = 0
+        while z < len(take):
+            target = take[z]
+            array.remove(target)
+            z += 1
+        
+#output
+remain = len(array)
+print(count - remain)
