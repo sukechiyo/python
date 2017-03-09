@@ -1,4 +1,4 @@
-#chair
+#chair & group
 n = input()
 n_array = n.split(" ")
 
@@ -10,7 +10,7 @@ for i in range(chair):
 
 count = len(array)
 
-#Customer
+#Customer Information
 for i in range(group):
     c = input()
     c_array = c.split(" ")
@@ -18,10 +18,9 @@ for i in range(group):
     member = int(c_array[0])
     pos = int(c_array[1])
 
-    f = 0
+    # Definition of filling position
     take = []
     for i in range(member):
-        
         pos2 = pos + i
         if pos2 > chair:
             r = pos2 - chair
@@ -29,7 +28,7 @@ for i in range(group):
             r = pos2
         take.append(r)
         
-
+    # Whether the sequence is completely contained in the sequence
     if all( x in array for x in take ) == True:
         z = 0
         while z < len(take):
