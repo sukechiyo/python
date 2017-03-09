@@ -21,12 +21,12 @@ for i in range(group):
     # Definition of filling position
     take = []
     for i in range(member):
-        pos2 = pos + i
-        if pos2 > chair:
-            r = pos2 - chair
+        sitting = pos + i
+        if sitting > chair:
+            s = sitting - chair
         else:
-            r = pos2
-        take.append(r)
+            s = sitting
+        take.append(s)
         
     # Whether the sequence is completely contained in the sequence
     if all( x in array for x in take ) == True:
