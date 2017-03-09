@@ -1,13 +1,13 @@
 #chair & group
 n = input()
 n_array = n.split(" ")
-
 chair = int(n_array[0])
 group = int(n_array[1])
+
+# Place a seat
 array = []
 for i in range(chair):
     array.append(i + 1)
-
 count = len(array)
 
 #Customer Information
