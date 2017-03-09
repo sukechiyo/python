@@ -30,11 +30,11 @@ for i in range(group):
         
     # Whether the sequence is completely contained in the sequence
     if all( x in array for x in take ) == True:
-        z = 0
-        while z < len(take):
-            target = take[z]
+        seated = 0
+        while seated < len(take):
+            target = take[seated]
             array.remove(target)
-            z += 1
+            seated += 1
         
 #output
 remain = len(array)
