@@ -1,4 +1,4 @@
-#chair & group
+# Definition of chair & group
 n = input()
 n_array = n.split(" ")
 chair = int(n_array[0])
@@ -10,7 +10,7 @@ for i in range(chair):
     array.append(i + 1)
 count = len(array)
 
-#Customer Information
+# Customer Information
 for i in range(group):
     c = input()
     c_array = c.split(" ")
@@ -36,6 +36,6 @@ for i in range(group):
             array.remove(target)
             seated += 1
         
-#output
+# Output
 remain = len(array)
 print(count - remain)
