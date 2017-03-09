@@ -1,0 +1,19 @@
+# Input
+v = input()
+s = input()
+v_array = v.split(" ")
+s_array = s.split(" ")
+
+# Confirm number of elements
+v_count = len(v_array)
+s_count = len(s_array)
+
+# process
+for i in range(v_count):
+    t = 0
+    while t < s_count:
+        if t == s_count - 1:
+            print(int(v_array[i]) + int(s_array[t]))
+        else:
+            print(int(v_array[i]) + int(s_array[t]) ,end=" ")
+        t += 1
