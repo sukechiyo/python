@@ -1,3 +1,6 @@
+# 長テーブルのうなぎ屋(https://paiza.jp/learning/long-table)
+
+
 # Definition of chair & group
 n = input()
 n_array = n.split(" ")
