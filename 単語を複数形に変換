@@ -1,0 +1,90 @@
+word = input()
+count = len(word) - 1
+
+
+if word[count] == "s":
+    if word == "oasis":
+        print("oases")
+    elif word == "mythos":
+        print("mythoi")
+    elif word == "series":
+        print("series")
+    elif word == "swiss":
+        print("swiss")
+    elif word == "genus":
+        print("genera")
+    elif word == "species":
+        print("species")
+    else:
+        print(word+"es")
+elif word[count] == "x":
+    if word == "crux":
+        print("cruces")
+    else:
+        print(word+"es")
+elif word[count] == "o":
+    if word == "piano" or word == "photo":
+        print(word+"s")
+    elif word[count - 1] == "a" or word[count - 1] == "i" or word[count - 1] == "u" or word[count - 1] == "e" or word[count - 1] == "o":
+        print(word+"s")
+    elif word == "graffito":
+        print("graffiti")
+    else:
+        print(word+"es")
+elif word[count - 1] == "s" and word[count] == "h":
+    if word == "fish":
+        print("fish")
+    else:
+        print(word+"es")
+elif word[count - 1] == "c" and word[count] == "h":
+    print(word+"es")
+elif word[count] == "y":
+    if word == "money":
+        print("money")
+    else:
+        str_list = list(word)
+        str_list[count] = 'i'
+        str_changed = "".join(str_list)
+        print(str_changed+"es")
+elif word[count] == "f":
+    if word == "roof" or  word == "chief" or word == "cliff" or word == "proof" or word == "reef" or word == "relief":
+        print(word+"s")
+    else:
+        str_list = list(word)
+        del str_list[count]
+        str_changed = "".join(str_list)
+        print(str_changed + "ves")
+elif word[count - 1] == "f" and word[count] == "e":
+    if word == "safe":
+        print(word+"s")
+    else:
+        str_list = list(word)
+        del str_list[count - 1: count + 1]
+        str_changed = "".join(str_list)
+        print(str_changed + "ves")
+elif word[count - 2] == "m" and word[count - 1] == "a" and word[count] == "n":
+        dst = word.replace("man", "men")
+        print(dst)
+elif word == "person":
+    print("people")
+elif word == "child":
+    print("children")
+elif word == "foot" or word == "tooth" or word == "goose":
+    dst = word.replace("oo", "ee")
+    print(dst)
+elif word == "phenomenon":
+    print("phenomena")
+elif word == "equipment":
+    print("equipment")
+elif word == "information":
+    print("information")
+elif word == "rice":
+    print("rice")
+elif word == "sheep":
+    print("sheep")
+elif word == "numen":
+    print("numina")
+
+    
+else:
+    print(word+"s")
