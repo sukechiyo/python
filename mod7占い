@@ -6,8 +6,7 @@ import itertools
 count = int(input())
 cards = []
 for i in range(count):
-    number = int(input())
-    cards.append(number)
+    cards.append(int(input()))
 
 mach = 0
 for element in itertools.combinations(cards, 3):
