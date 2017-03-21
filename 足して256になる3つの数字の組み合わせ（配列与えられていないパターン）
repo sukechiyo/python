@@ -1,0 +1,25 @@
+import itertools
+
+# 256までの数字をnumbersに挿入
+numbers = [i for i in range(256)]
+
+# numbersから3つずつ抽出(重複なし)
+array = list(itertools.combinations(numbers,3))
+
+# machという名前で空の配列を生成
+mach = []
+
+# arrayの長さだけ処理を繰り返す
+for i in range(len(array)):
+    
+    # array[i]が足して255なら
+    if sum(array[i]) == 256:
+        
+        # もし配列に0を含めてはいけないなら
+        if array[i][0] != 0:
+            
+            # machに組み合わせを挿入
+            mach.append(array[i])
+
+# 1～256までの数字の中で、足して「256」になる数字の組み合わせ
+print(mach)
