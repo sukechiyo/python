@@ -9,12 +9,8 @@ for i in range(count):
     number = int(input())
     cards.append(number)
 
-combinations = list(itertools.combinations(cards,3))
-
-length = len(combinations)
 mach = 0
-for i in range(length):
-    s = sum(combinations[i])
-    if s % 7 == 0:
+for element in itertools.combinations(cards, 3):
+    if sum(element) % 7 == 0:
         mach += 1
 print(mach)
