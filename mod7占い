@@ -1,0 +1,27 @@
+#Pizaで何度でも挑戦できる問題(Sランク)にある「mod7占い」について、とりあえず80点は出たので保存しておきます。
+#大規模データを処理する際に、「タイムエラー」ではじかれているので、おそらく処理効率を上げる課題に取り組む必要がありそうです。
+import random
+import itertools
+
+
+count = int(input())
+cards = []
+for i in range(count):
+    number = int(input())
+    cards.append(number)
+
+
+# 3枚ずつ抽出し、該当すれば+1する
+combinations = list(itertools.combinations(cards,3))
+
+length = len(combinations)
+mach = 0
+for i in range(length):
+    a = int(combinations[i][0])
+    b = int(combinations[i][1])
+    c = int(combinations[i][2])
+    s = a + b + c
+    if s % 7 == 0:
+        mach += 1
+    i += 1
+print(mach)
