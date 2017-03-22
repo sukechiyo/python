@@ -1,0 +1,30 @@
+#　与えられるデータ例：「10 2」
+
+data = input()
+array = data.split(" ")
+
+# 繰り返しの上限　= number
+n = int(array[0])
+
+# 「1」がある数　= count
+c = int(array[1])
+
+# 処理
+i = 0
+
+# 合致する数　= mach
+mach = 0
+
+# 上限数になるまでまわし続ける
+while i <= n:
+
+    # bin()で2進数変換
+    b = bin(i)
+    
+    # 変換した数の中に「1」がcount個あるかどうかを判断し、もしあればmachを１つずつ増やす
+    if b.count('1') == c:
+        mach += 1
+    
+    i += 1
+    
+print(mach)
