@@ -1,0 +1,17 @@
+import sys
+
+a = []
+for line in sys.stdin:
+    a.append(line)
+
+for i in range(len(a)):
+    numbers = []
+    for t in range(4):
+        numbers.append(int(a[i][t]))
+        
+    if 0 in numbers:
+        c = numbers.index(0)
+        del numbers[c]
+        print(min(numbers))
+    else:
+        print(max(numbers))
