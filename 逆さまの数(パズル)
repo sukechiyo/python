@@ -1,0 +1,87 @@
+# coding: utf-8
+# Here your code !
+
+# 桁数
+N = int(input())
+
+# 最大値
+max = int("9" * N) + 1
+
+# 調査対象の算出
+numbers = []
+i = 0
+for i in range(max):
+    if i < 10:
+        num = "0"+str(i)
+    else:
+        num = str(i)
+    numbers.append(num)
+
+# 除外リスト
+ignore = ['3','4','7']
+
+# 配列の表示
+n_array = []
+for c in range(len(numbers)):
+    
+    normal = numbers[c]
+    n_len = len(normal)
+    
+    f_array = []
+    for n in range(n_len):
+        if normal[n] in ignore:
+            flg = 2
+            f_array.append(flg)
+        else:
+            flg = 1
+            f_array.append(flg)
+    
+    if f_array.count(2) < 1:
+        st = ""
+        for t in range(n_len):
+            st += normal[t]
+            
+    n_array.append(st)
+
+
+# 除外
+mach = 0
+
+# 抽出したデータ
+data = list(set(n_array))
+data.sort()
+
+# データの合計数
+d_count = len(data)
+
+test = []
+for m in range(d_count):
+    
+    # 要素を逆転させる
+    target = data[m]
+    rev = ""
+    e_number = []
+    for s_c in range(len(target)):
+        elem = target[s_c]
+        
+        # 6なら9へ、9なら6へ
+        if elem == '6':
+            elem = '9'
+        elif elem == '9':
+            elem = '6'
+            
+        e_number += elem
+    
+    # 得られた数を逆転する(逆表示の数を作るパーツ)
+    rev = list(reversed(e_number))
+    
+    re_number = ""
+    for r_c in range(len(rev)):
+        re_number += rev[r_c]
+
+    if int(re_number) > int(target):
+        mach += 1
+
+    m += 1
+    
+print(mach)
