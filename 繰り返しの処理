@@ -1,0 +1,61 @@
+N = int(input())
+
+# 時間の配列
+t_array = []
+
+# 条件の配列
+c_array = []
+
+# N回繰り返す
+for i in range(N):
+    
+    data = input()
+    d_array = data.split(" ")
+    
+    # 時間
+    time = int(d_array[0])
+    
+    # 条件
+    case = d_array[1]
+
+    # データ格納先(1回ごとに更新)
+    block = []
+
+    # 前回残り分の時間を算出
+    if time in t_array:
+        num = t_array.index(time)
+        j = i - 1
+        if c_array[j] == "in":
+            r = 5 - num
+        else:
+            r = 3 - num
+    else:
+        r = 0
+
+    # 今回の時間を算出し、t_arrayに格納
+    if case == "out":
+        c_array.append("out")
+        h = 0
+        while h < 3 + r:
+            t_data = time + h
+            if t_data <= 24:
+                block.append(t_data)
+                t_array.append(t_data)
+            h += 1
+    else:
+        c_array.append("in")
+        h = 0
+        while h < 5 + r:
+            t_data = time + h
+            if t_data <= 24:
+                block.append(t_data)
+                t_array.append(t_data)
+            h += 1
+
+
+# 各状態の時間を算出
+err = len(list(set(t_array)))
+normal = 24 - err
+
+# 算出した結果をもとに最終的な料金を計算
+print(err * 2 + normal * 1)
