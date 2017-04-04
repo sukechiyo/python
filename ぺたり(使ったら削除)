@@ -1,0 +1,27 @@
+N = input()
+N_array = N.split(" ")
+
+# 会員数
+member = int(N_array[0])
+
+# イベント回数
+event = int(N_array[1])
+
+# 計算
+result = []
+for i in range(event):
+    data = input()
+    d_array = data.split(" ")
+    s = 0
+    for t in range(member):
+        s += int(d_array[t])
+        
+    result.append(s)
+
+mach = 0
+total = 0
+for l in range(len(result)):
+    if int(result[l]) > 0:
+        total += result[l]
+
+print(total)
