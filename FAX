@@ -1,0 +1,52 @@
+import math
+
+# 1度に運べる紙の最大枚数 
+m = int(input())
+
+# ファックスが届く回数
+n = int(input())
+
+
+# 配達データの配列
+array = []
+t_array = []
+
+# 1回毎のデータ取得
+for i in range(n):
+    data = input()
+    d_array = data.split(" ")
+    
+    # 時間
+    hour = int(d_array[0])
+    
+    # 分
+    minute = int(d_array[1])
+    
+    # 量
+    amount = int(d_array[2])
+    
+    # 時間データの配列に格納
+    if minute <= 59:
+        t_array.append(hour)
+    else:
+        t_array.append(hour + 1)
+
+
+    array.append([hour,minute,amount])
+
+# 時間配列の重複削除
+t_data = list(set(t_array))
+
+# 時間ごとの和を算出
+result = 0
+for s in range(len(t_data)):
+    
+    deliver = 0
+    for d in range(len(array)):
+        if int(array[d][0]) == int(t_data[s]):
+            deliver += array[d][2]
+    
+    r = math.ceil(deliver / m)
+    result += r
+
+print(result)
